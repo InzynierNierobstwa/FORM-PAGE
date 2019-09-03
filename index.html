@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> FormValidation Page </title>
+
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "main">
+        <header class = "header">
+            <img class = "header__img" src="img/header-logo.png" alt="masterlab creative">
+        </header>
+        <main class = "container">
+            <section class = "container--register">
+                <h2 class = "container__heading container__heading--register">
+                    Register Form
+                </h2>
+                <form class = "container__form container__form--register" action="">
+                    <fieldset class = "fieldset fieldset--register">
+                        <div class = "fieldset__form fieldset__form--username">
+                            <span><img src = "svg/001-avatar.svg" alt = "user icon"></span>
+                            <input type = "text" placeholder = "Username" aria-required = "true" required minlength = "2" aria-valuemin = "2">
+                        </div>
+                            <div class = "fieldset__form fieldset__form--password">
+                            <span><img src = "svg/004-padlock.svg" alt = "lock icon"></span>
+                            <input type = "text" placeholder = "Password" aria-required = "true" required minlength = "8" aria-valuemin = "8">
+                        </div>
+                        <div class = "fieldset__form fieldset__form--confirm">
+                            <span><img src = "svg/004-padlock.svg" alt = "lock icon"></span>
+                            <input type = "text" placeholder = "Confirm Password" aria-required = "true" required minlength = "8" aria-valuemin = "8">
+                        </div>
+                        <div class = "fieldset__form fieldset__form--mail">
+                            <span><img src = "svg/003-envelope.svg" alt = "mail icon"></span>
+                            <input type = "email" placeholder = "Email" aria-required="true" required>
+                        </div>
+                        <div class = "fieldset__form fieldset__username--location">
+                            <span><img src = "svg/005-pin.svg" alt = "location icon"></span>
+                            <input id = "placeId" type = "text" placeholder = "Location" list = "continents"><!-- doczytać -->
+                            <datalist id = "placeId">
+                                <option value="Africa"></option>
+                                <option value="Antarctica"></option>
+                                <option value="Asia"></option>
+                                <option value="Australia"></option>
+                                <option value="Europe"></option>
+                                <option value="North America"></option>
+                                <option value="Sout America"></option>
+                            </datalist>
+                        </div>
+                        <div class = "fieldset__checkbox fieldset__checkbox--register">
+                            <label for = "checkbox">
+                                <input type = "checkbox" name = "checkbox" id = "checkboxRegister" reuqired aria-checked = "true" checked>
+                                <p>I have read and accept the terms of use.</p>
+                            </label>
+                        </div>
+                        <button type = "submit"> Sign up </button>
+                    </fieldset>
+                </form>
+            </section>
+            <section class = "container--mail">
+                <h2 class="container__heading container__heading--mail">
+                    Send Email
+                </h2>
+                <form class = "container__form container__form--mail" action="">
+                    <fieldset class = "fieldset fieldset--mail">
+                        <div class = "fieldset__form fieldset__form--username">
+                            <span><img src = "svg/001-avatar.svg" alt = "user-icon"></span>
+                            <input type = "text" placeholder = "Username" aria-required = "true" required minlength = "2" aria-valuemin = "2">
+                        </div>
+                        <div class = "fieldset__form fieldset__form--mail">
+                            <span><img src = "svg/003-envelope.svg" alt = "mail-icon"></span>
+                            <input type = "email" placeholder = "Email" aria-required = "true" required>
+                        </div>
+                        <div class = "fieldset__form fieldset__form--textarea">
+                            <textarea name = "message" placeholder = "Type your message" rows = "10" cols = "5" aria-label = "Type your message" aria-required = "true" required minlength = "10" aria valuemin = "10" aria-rowcount = "10"></textarea>
+                        </div>
+                        <div class = "fieldset__checkbox fieldset__checkbox--mail">
+                            <label for = "checkbox">
+                                <input type = "checkbox" name = "checkbox" id = "checkboxMail" reuquired aria-checked = "true" checked>
+                                <p> Send a copy to my Email </p>
+                            </label>
+                        </div>
+                        <button type = "submit"> Send Email </button>
+                    </fieldset>
+                </form>
+            </section>
+            <section class = "container--signIn">
+                <h2 class="container__heading container__heading--signIn">
+                    Sign In Form
+                </h2>
+                <form class = "container__form container__form--signIn" action="">
+                    <fieldset class = "fieldset fieldset--signIn">
+                        <div class = "fieldset__form fieldset__form--username">
+                            <span><img src="svg/001-avatar.svg" alt="user-icon"></span>
+                            <input type = "text" placeholder = "Username" aria-required = "true" required minlength = "2" aria-valuemin = "2">
+                        </div>
+                        <div class = "fieldset__form fieldset__form--password">
+                            <span><img src = "svg/004-padlock.svg" alt = "lock-icon"></span>
+                            <input type = "text" placeholder = "Password" aria-required = "true" required minlength = "8" aria-valuemin = "8">
+                        </div>
+                        <div class = "fieldset__checkbox fieldset__checkbox--signIn">
+                            <label for = "checkboxSignIn">
+                            <input type = "checkbox" name = "checkbox" id = "checkboxSignIn" required aria-checked = "false" checked>
+                            <p> Remember me </p>
+                            </label>
+                        </div>
+                        <button type = "submit"> Sign In </button>
+                    </fieldset>
+                </form>
+            </section>
+            <section class = "container--recover">
+                <h2 class="container__heading container__heading--recover">
+                    Recover Form
+                </h2>
+                <form action="" class = "container__form container__form--recover">
+                    <fieldset class = "fieldset fieldset--recover">
+                        <div class = "fieldset__form fieldset__form--mail">
+                            <span><img src = "svg/003-envelope.svg" alt = "mail-icon"></span>
+                            <input type = "email" placeholder = "Enter your Email" aria-required = "true" required>
+                        </div>
+                        <div class = "fieldset__form fieldset__form--phone">
+                            <span><img src = "svg/002-phone-call.svg" alt = "phone-icon"></span>
+                            <input type = "number" placeholder = "Enter your phone number" aria-required = "true" required minlength = "9" aria-valuemin = "9">
+                        </div>
+                        <div class = "fieldset__form fieldset__form--buttonContainer">
+                            <button type = "submit"> Send </button>
+                            <button type = "button"> Done </button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+            <section class = "container--subscribe">
+                <h2 class="container__heading container__heading--subscribe">
+                    Subscribe Form
+                </h2>
+                <form action="" class = "container__form container__form--subscribe">
+                    <fieldset class = "fieldset fieldset--subscribe">
+                        <div class = "fieldset__form fieldset__form--mail">
+                            <span><img src = "svg/003-envelope.svg" alt = "mail-icon"></span>
+                            <input type = "email" placeholder = "Enter your Email" aria-required = "true" required>
+                        </div>
+                        <div class = "fieldset__form fieldset__form--buttonContainer">
+                            <button type = "submit"> Subscribe </button>
+                            <button type = "button"> No, Thanks </button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+            <aside class="aside">
+                <img src="img/footer-logo.png" class="aside__img" alt="masterlab creative">
+            </aside>
+        </main>
+    </div>
+</body>
+</html>
